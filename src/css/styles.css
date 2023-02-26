@@ -37,6 +37,7 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     line-height: 7rem;
+    letter-spacing: -5px;
 }
 
 h2 {
@@ -56,7 +57,8 @@ h3 {
 }
 
 h4 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
+    font-weight: 300;
 }
 
 .container {
@@ -80,12 +82,12 @@ nav {
     align-items: center;
     padding: 0 40px;
     backdrop-filter: blur(100px);
-    transform: translateY(0);
+    top: 0;
     transition: .3s ease-in-out;
 }
 
 .hideNav {
-    transform: translateY(-100%);
+    top: -80px;
 }
 
 .nav-left {
@@ -102,7 +104,7 @@ nav {
 .nav-divider {
     height: 35px;
     width: 2px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .cv {
@@ -147,12 +149,12 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 60px;
+    padding: 40px 60px 40px 70px;
     backdrop-filter: blur(100px);
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     transform: translateX(100%);
-    transition: .2s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .showMenu {
@@ -160,11 +162,16 @@ nav {
 }
 
 .menu h4 {
-    text-align: left;
+    text-align: right;
 }
 
 .menu div:last-child {
     height: 40px;
+}
+
+.menu ul {
+    padding-right: 40px;
+    border-right: 2px solid white;
 }
 
 li{
@@ -174,6 +181,15 @@ li{
 
 .menu li {
     margin-top: 20px;
+    transition: .2s ease-in-out;
+}
+
+.menu li:first-child {
+    margin-top: 0;
+}
+
+.menu li:hover {
+    transform: translateX(-10px);
 }
 
 header {
@@ -216,7 +232,7 @@ header h3 {
 .line {
     width: 100vw;
     height: 2px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.3);
     transform: translateX(-40px);
 }
 
@@ -316,10 +332,6 @@ header h3 {
 
 .footer-left > h4 {
     margin-right: 50px;
-}
-
-.footer-left > div h4 {
-    margin-right: 15px;
 }
 
 .footer-right img {
