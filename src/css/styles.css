@@ -79,7 +79,13 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(100px);
+    transform: translateY(0);
+    transition: .3s ease-in-out;
+}
+
+.hideNav {
+    transform: translateY(-100%);
 }
 
 .nav-left {
@@ -151,6 +157,10 @@ nav {
 
 .showMenu {
     transform: translateX(0%);
+}
+
+.menu h4 {
+    text-align: left;
 }
 
 .menu div:last-child {

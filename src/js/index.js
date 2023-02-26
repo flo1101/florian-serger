@@ -1,3 +1,4 @@
+// Sidebar Menu
 const menuBtn = document.querySelector(".btn-menu");
 const closeMenuOnClick = document.querySelectorAll(".close-menu-onClick");
 
@@ -11,5 +12,18 @@ closeMenuOnClick.forEach(el => {
     el.addEventListener("click", () => {
         menu.classList.toggle("showMenu");
     })
+})
+
+// Navbar
+const nav = document.querySelector("nav");
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+    if (lastScrollY < window.scrollY) {
+        nav.classList.add("hideNav");
+    } else {
+        nav.classList.remove("hideNav");
+    }
+    lastScrollY = window.scrollY
 })
 
