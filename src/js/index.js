@@ -7,7 +7,8 @@ const workSlider = new Splide( '.splide', {
     arrows: false,
     perPage: 8,
     autoplay: true,
-    pagination: false
+    pagination: false,
+    interval: 4000
 } );
 
 workSlider.mount();
@@ -41,3 +42,11 @@ window.addEventListener("scroll", () => {
     lastScrollY = window.scrollY
 })
 
+// Cursor
+let cursor = document.querySelector("#cursor");
+document.addEventListener("mousemove", e => {
+    let x = e.clientX;
+    let y = e.clientY;
+    cursor.style.left = x + "px";
+    cursor.style.top = y + "px";
+})
