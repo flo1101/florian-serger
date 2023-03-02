@@ -1,0 +1,7 @@
+{
+  "name": "florian-serger",
+  "version": "1.0.0",
+  "dependencies": {
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3"
+  }
+}

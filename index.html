@@ -5,13 +5,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--    Splide      -->
+    <link rel="stylesheet" href="src/css/splide.min.css">
+    <script src="src/js/splide-extension-auto-scroll.min.js" defer></script>
+    <script src="src/js/splide.min.js" defer></script>
     <link rel="stylesheet" href="src/css/styles.css">
+<!--    Google Fonts        -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Yeseva+One&display=swap"
           rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="res/favicon.ico">
-    <script src="src/js/index.js" defer></script>
+    <script type="module" src="./src/js/index.js" defer></script>
     <title>Florian Serger</title>
 </head>
 <body>
@@ -33,13 +38,12 @@
             <img src="res/menu-close.svg" alt="">
         </div>
         <ul>
-            <li><a href="#header" class="close-menu-onClick"><h4>Start</h4></a></li>
-            <li><a href="#about" class="close-menu-onClick"><h4>About</h4></a></li>
-            <li><a href="#work" class="close-menu-onClick"><h4>Work</h4></a></li>
-            <li><a href="#skillset" class="close-menu-onClick"><h4>Skillset</h4></a></li>
-            <li><a href="#contact" class="close-menu-onClick"><h4>Contact</h4></a></li>
+            <li><a href="#header" class="close-menu-onClick"><h1>Start</h1></a></li>
+            <li><a href="#about" class="close-menu-onClick"><h1>About</h1></a></li>
+            <li><a href="#work" class="close-menu-onClick"><h1>Work</h1></a></li>
+            <li><a href="#skillset" class="close-menu-onClick"><h1>Skillset</h1></a></li>
+            <li><a href="#contact" class="close-menu-onClick"><h1>Contact</h1></a></li>
         </ul>
-        <div></div>
     </div>
     <header id="header">
         <h3>Florian Serger</h3>
@@ -61,18 +65,44 @@
     <section class="work" id="work">
         <h2>Work Samples.</h2>
         <div class="line"></div>
-        <div class="work-slider">
-            <div class="track">
-                <div class="slide">
-                    <div class="slide-overlay">
-                        <h4>Pokédex</h4>
-                    </div>
-                    <div class="slide-content">
-                        <img src="res/slider/pokedex.png" alt="">
-                    </div>
-                </div>
+        <section class="splide work-slider" aria-label="Splide Basic HTML Example">
+            <div class="splide__track track">
+                <ul class="splide__list">
+                    <li class="splide__slide slide">
+                        <div class="slide-overlay">
+                            <h4>Pokédex</h4>
+                        </div>
+                        <div class="slide-content">
+                            <img src="res/slider/pokedex.png" alt="">
+                        </div>
+                    </li>
+                    <li class="splide__slide slide">
+                        <div class="slide-overlay">
+                            <h4>Trivia Quiz</h4>
+                        </div>
+                        <div class="slide-content">
+                            <img src="res/slider/pokedex.png" alt="">
+                        </div>
+                    </li>
+                    <li class="splide__slide slide">
+                        <div class="slide-overlay">
+                            <h4>Moebelmacher</h4>
+                        </div>
+                        <div class="slide-content">
+                            <img src="res/slider/pokedex.png" alt="">
+                        </div>
+                    </li>
+                    <li class="splide__slide slide">
+                        <div class="slide-overlay">
+                            <h4>Snake</h4>
+                        </div>
+                        <div class="slide-content">
+                            <img src="res/slider/pokedex.png" alt="">
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </section>
     </section>
     <section class="skillset" id="skillset">
         <div class="container">

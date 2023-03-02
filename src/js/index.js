@@ -1,3 +1,16 @@
+// Splide
+const workSlider = new Splide( '.splide', {
+    type   : 'loop',
+    drag   : 'free',
+    focus  : 'center',
+    snap    : true,
+    arrows: false,
+    perPage: 8,
+    autoplay: true
+} );
+
+workSlider.mount();
+
 // Sidebar Menu
 const menuBtn = document.querySelector(".btn-menu");
 const closeMenuOnClick = document.querySelectorAll(".close-menu-onClick");
