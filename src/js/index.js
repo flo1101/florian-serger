@@ -6,7 +6,8 @@ const workSlider = new Splide( '.splide', {
     snap    : true,
     arrows: false,
     perPage: 8,
-    autoplay: true
+    autoplay: true,
+    pagination: false
 } );
 
 workSlider.mount();
