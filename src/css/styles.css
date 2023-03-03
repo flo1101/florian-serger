@@ -17,7 +17,7 @@
 }
 
 *:hover {
-    cursor: none;
+    /*cursor: none;*/
 }
 
 *::-webkit-scrollbar {
@@ -27,7 +27,7 @@
 body {
     font-size: 1rem;
     position: relative;
-    cursor: none;
+    /*cursor: none;*/
 }
 
 section {
