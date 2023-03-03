@@ -25,7 +25,7 @@
 }
 
 body {
-    font-size: 1rem; /* 1.125 mobile*/
+    font-size: 1rem;
     position: relative;
     cursor: none;
 }
@@ -38,7 +38,7 @@ h1 {
     font-family: 'Yeseva One', cursive;
     font-weight: 400;
     color: white;
-    font-size: 7.5rem; /* 3.75 mobile*/
+    font-size: 7.5rem;
     text-transform: uppercase;
     text-align: center;
     line-height: 7rem;
@@ -46,7 +46,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3.125rem; /* 2.188 mobile */
+    font-size: 3.125rem;
     font-weight: 600;
     line-height: 1;
     margin-bottom: 15px;
@@ -377,11 +377,14 @@ header h3 {
 
 .footer-right img {
     rotate: 180deg;
+
 }
 
-.footer-right a:first-child {
-    margin-right: 40px;
+span.break {
+    display: inline-block;
+    font-family: 'Yeseva One', cursive;
 }
+
 
 #cursor {
     position: fixed;
@@ -429,5 +432,81 @@ header h3 {
         max-width: 500px;
         min-width: 500px;
         height: 500px;
+    }
+}
+
+@media(max-width: 720px) {
+    h1 {
+        font-size: 3.75rem;
+        line-height: 3.75rem;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+    }
+
+    h3 {
+        word-break: break-all;
+        line-height: 2rem;
+        font-size: 1rem;
+        letter-spacing: 1rem;
+    }
+
+    header h3 {
+        width: 200px;
+        margin-bottom: 27px;
+    }
+
+    .slide {
+        height: 400px;
+        min-width: 400px;
+        max-width: 400px;
+    }
+
+    .menu li h1 {
+        font-size: 3rem;
+        padding: 0;
+    }
+
+    .menu li {
+        margin-top: 0;
+    }
+}
+
+@media(max-width: 540px) {
+
+    :root {
+        --section-padding: 120px 50px;
+    }
+
+    .skill img {
+        transform: scale(1);
+    }
+
+    .skills {
+        gap: 30px;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-left > h4 {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .slide {
+        min-width: 80vw;
+        max-width: 80vw;
+    }
+
+    .contact .line {
+        left: -10px;
+    }
+
+    .skillset p {
+        text-align: left;
     }
 }
