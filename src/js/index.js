@@ -1,3 +1,7 @@
+
+//Smooth Scrolling
+
+
 // Splide
 const workSlider = new Splide( '.splide', {
     type   : 'loop',
@@ -33,6 +37,16 @@ closeMenuOnClick.forEach(el => {
 const nav = document.querySelector("nav");
 let lastScrollY = window.scrollY;
 
+window.addEventListener("load", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'auto'
+    })
+    setTimeout(() => {
+        document.querySelector("nav").style.opacity = "1";
+    }, 2000)
+})
+
 window.addEventListener("scroll", () => {
     if (lastScrollY < window.scrollY) {
         nav.classList.add("hideNav");
@@ -43,10 +57,10 @@ window.addEventListener("scroll", () => {
 })
 
 // Cursor
-let cursor = document.querySelector("#cursor");
-document.addEventListener("mousemove", e => {
-    let x = e.clientX;
-    let y = e.clientY;
-    cursor.style.left = x + "px";
-    cursor.style.top = y + "px";
-})
+// let cursor = document.querySelector("#cursor");
+// document.addEventListener("mousemove", e => {
+//     let x = e.clientX;
+//     let y = e.clientY;
+//     cursor.style.left = x + "px";
+//     cursor.style.top = y + "px";
+// })

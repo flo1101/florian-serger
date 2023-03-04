@@ -2,6 +2,8 @@
   "name": "florian-serger",
   "version": "1.0.0",
   "dependencies": {
-    "@splidejs/splide-extension-auto-scroll": "^0.5.3"
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "slickscrolljs": "^2.0.2",
+    "smooth-scrollbar": "^8.8.1"
   }
 }
