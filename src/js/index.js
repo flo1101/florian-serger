@@ -40,7 +40,7 @@ let lastScrollY = window.scrollY;
 window.addEventListener("load", () => {
     window.scrollTo({
         top: 0,
-        behavior: 'auto'
+        behavior: 'instant'
     })
     setTimeout(() => {
         document.querySelector("nav").style.opacity = "1";
