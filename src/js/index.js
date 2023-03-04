@@ -1,6 +1,10 @@
 
-//Smooth Scrolling
-
+//Page Load
+window.addEventListener("load", () => {
+    document.querySelector("*").style.scrollBehavior = "unset";
+    window.scrollTo(0, 0);
+    document.querySelector("*").style.scrollBehavior = "smooth";
+})
 
 // Splide
 const workSlider = new Splide( '.splide', {
@@ -37,14 +41,9 @@ closeMenuOnClick.forEach(el => {
 const nav = document.querySelector("nav");
 let lastScrollY = window.scrollY;
 
-window.addEventListener("load", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'instant'
-    })
-    setTimeout(() => {
-        document.querySelector("nav").style.opacity = "1";
-    }, 2000)
+nav.addEventListener("animationend", () => {
+    document.querySelector("nav").style.opacity = "1";
+    document.body.style.overflow = "visible";
 })
 
 window.addEventListener("scroll", () => {
@@ -56,11 +55,22 @@ window.addEventListener("scroll", () => {
     lastScrollY = window.scrollY
 })
 
-// Cursor
-// let cursor = document.querySelector("#cursor");
-// document.addEventListener("mousemove", e => {
-//     let x = e.clientX;
-//     let y = e.clientY;
-//     cursor.style.left = x + "px";
-//     cursor.style.top = y + "px";
-// })
+// // Work Hover-Cursor
+let cursor = document.querySelector(".visit-cursor");
+document.addEventListener("mousemove", e => {
+    let x = e.clientX - 55;
+    let y = e.clientY - 55;
+    cursor.style.left = x + "px";
+    cursor.style.top = y + "px";
+})
+
+const slides = document.querySelectorAll(".slide");
+
+slides.forEach(slide => {
+    slide.addEventListener("mouseenter", () => {
+        cursor.style.transform = "scale(1)";
+    })
+    slide.addEventListener("mouseleave", () => {
+        cursor.style.transform = "scale(0)";
+    })
+})

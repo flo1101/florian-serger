@@ -16,9 +16,6 @@
     scrollbar-width: none;  /* Firefox */
 }
 
-*:hover {
-    /*cursor: none;*/
-}
 
 *::-webkit-scrollbar {
     display: none;
@@ -27,7 +24,7 @@
 body {
     font-size: 1rem;
     position: relative;
-    /*cursor: none;*/
+    overflow: hidden;
 }
 
 section {
@@ -298,10 +295,14 @@ header h3 {
     width: 120vw
 }
 
+.track ul {
+    position: relative;
+}
+
 .slide {
     width: 600px;
     height: 600px;
-    cursor: pointer;
+    cursor: none;
     margin-right: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
@@ -309,6 +310,10 @@ header h3 {
     position: relative;
     min-width: 600px;
     max-width: 600px;
+}
+
+.slide:hover > * {
+    cursor: none;
 }
 
 .slide-overlay {
@@ -409,6 +414,38 @@ span.break {
     font-family: 'Yeseva One', cursive;
 }
 
+.visit-cursor {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 50;
+    padding: 60px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: .8rem;
+    transition: transform .2s ease-out;
+    transform: scale(0);
+    pointer-events: none;
+}
+
+.mobile-slide-hint {
+    display: none;
+    color: rgba(255, 255, 255, 0.35);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: .8rem;
+}
+
+
 @keyframes fadeInDown {
     0% {
         top: -5%;
@@ -463,24 +500,6 @@ span.break {
 }
 
 
-#cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    /*border: 1px solid var(--dark-purple);*/
-    background-color: rgba(54, 50, 65, 0.5);;
-    border-radius: 50%;
-    transition: 80ms;
-    //transition-property: transform, background-color;
-    transition-timing-function: ease-out;
-    pointer-events: none;
-    z-index: 100;
-}
-
-.cursor-hover:hover ~ #cursor {
-    transform: scale(150%);
-    background-color: black;
-}
 
 @media(max-width: 1100px) {
     h1 {
@@ -540,6 +559,10 @@ span.break {
         max-width: 400px;
     }
 
+    .mobile-slide-hint {
+        display: block;
+    }
+
     .menu li h1 {
         font-size: 3rem;
         padding: 0;
@@ -547,6 +570,18 @@ span.break {
 
     .menu li {
         margin-top: 0;
+    }
+
+    .visit-cursor {
+        display: none;
+    }
+
+    .slide-overlay {
+        padding: 15px 0;
+    }
+
+    .slide-overlay h4 {
+        font-size: 1.1rem;
     }
 }
 
