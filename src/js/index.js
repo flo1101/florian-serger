@@ -16,7 +16,8 @@ const workSlider = new Splide( '.splide', {
     perPage: 8,
     autoplay: true,
     pagination: false,
-    interval: 4000
+    interval: 3000,
+    pauseOnHover: false
 } );
 
 workSlider.mount();
