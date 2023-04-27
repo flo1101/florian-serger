@@ -48,8 +48,7 @@ nav.addEventListener("animationend", () => {
 })
 
 window.addEventListener("scroll", () => {
-    const top = document.querySelector('body').offsetTop;
-    if (lastScrollY < window.scrollY && top === 0) {
+    if (lastScrollY < window.scrollY) {
         nav.classList.add("hideNav");
     } else {
         nav.classList.remove("hideNav");
