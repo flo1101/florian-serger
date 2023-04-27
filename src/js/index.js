@@ -48,12 +48,14 @@ nav.addEventListener("animationend", () => {
 })
 
 window.addEventListener("scroll", () => {
-    if (lastScrollY < window.scrollY) {
+    const top = document.querySelector('body').offsetTop;
+    if (lastScrollY < window.scrollY && top === 0) {
         nav.classList.add("hideNav");
     } else {
         nav.classList.remove("hideNav");
     }
     lastScrollY = window.scrollY
+    
 })
 
 // // Work Hover-Cursor
